@@ -34,7 +34,7 @@ h1{
     
 }
 
-.hero #search-input{
+.hero #names{
     padding: 12px 25px;
     padding-left: 35px;
     margin: auto;
@@ -48,7 +48,7 @@ h1{
     color: white;
     font-size: 16px;;
 }
-.hero #search-input:focus{
+.hero #names:focus{
     outline: none;
 }
 
@@ -168,7 +168,7 @@ a{
 
      }
 
-     .hero #search-input{
+     .hero #names{
         width:70vw;
     }
 
