@@ -1,0 +1,50 @@
+<div class="container">
+    <h1>devfinder</h1>
+
+    <div class="hero">
+
+        <form (ngSubmit)="onSubmit()" #finderForm="ngForm">
+        <input type="text" id="names" name="username" [(ngModel)]="username" placeholder='search github username' required=""/>
+        <input type="submit" value="Search "id="btn" (click)="handleSearch()" [disabled]="!finderForm.form.valid"/>
+       </form>
+    </div>
+
+    <div id="profile" > 
+        <div class="user-profile">
+            <img src={{user.avatarUrl}} alt="" />
+            <div id="all-details">
+            <div id="details">
+            <div>
+            <p>{{user.login}}</p>
+            <a href="{{user.htmlUrl}}" target="_blank" >@{{user.login}}</a>
+            </div>
+            <div>
+            <p>Joined {{user.joined}}</p>
+            </div>
+            </div>
+           <div id="follow">
+           <p>Repos {{user.repos}}</p>
+           <p>Followers {{user.followers}}</p>
+           <p>Following {{user.following}}</p>
+           </div>
+           <p>Location: {{user.location}}</p>
+            </div>
+            </div>
+    </div>
+
+    
+    <div id="repos">
+        <div class="user-repo" *ngFor='let repo of repos'>
+            <p>{{repo.name}}</p>
+               <p>{{repo.language}}</p>
+               <div id="other">
+               <p>Forks:{{repo.forks}}</p>
+               <p>Stars:{{repo.counts}}</p>
+               <p>Watchers: {{repo.watchers}}</p>
+               </div>
+              <a href="{{repo.html_url}}" target="_blank" >Source Code</a>
+            </div>`
+    </div>
+   
+
+</div>
