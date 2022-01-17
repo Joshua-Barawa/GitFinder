@@ -14,6 +14,14 @@ public repository:any
 
 constructor(private http:HttpClient) {}
 
+getUser(){
+  return this.user;
+}
+
+getRepos(){
+  return this.repository;
+}
+
 
   getUsers(name:string){
     this.http.get('https://api.github.com/users/' + name).subscribe((res) =>{

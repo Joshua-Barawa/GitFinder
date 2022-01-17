@@ -3,9 +3,9 @@
 
     <div class="hero">
 
-        <form (ngSubmit)="onSubmit()" #finderForm="ngForm">
-        <input type="text" id="names" name="username" [(ngModel)]="username" placeholder='search github username' required=""/>
-        <input type="submit" value="Search "id="btn" (click)="handleSearch()" />
+        <form (ngSubmit)="onSubmit()" #finderForm='ngForm'>
+        <input type="text" id="names" name="username" [(ngModel)]="username" value=" " placeholder='search github username' required/>
+        <button type="submit" id="btn" (click)="handleSearch(); finderForm.reset()" [disabled]="!finderForm.form.valid">Search</button>
        </form>
     </div>
 
