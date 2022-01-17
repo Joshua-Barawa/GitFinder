@@ -32,13 +32,13 @@ export class FinderFormComponent implements OnInit {
         console.log(this.username)
       }
   }
-  
+
   onSubmit(){
     this.submmitng = true;
   }
 
   ngOnInit(): void {
-    this.configService.getUsers("Joshua-Barawa")
+    
    } 
 
 }
