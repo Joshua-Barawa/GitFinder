@@ -1,16 +1,16 @@
 <div class="container">
-    <h1>devfinder</h1>
+    <h2>devfinder</h2>
 
     <div class="hero">
 
         <form (ngSubmit)="onSubmit()" #finderForm='ngForm'>
-        <input type="text" id="names" name="username" [(ngModel)]="username" value=" " placeholder='search github username' required/>
+        <input type="text" id="names" name="username" [(ngModel)]="username" value="" #names='ngModel' placeholder='search github username' required/>
         <button type="submit" id="btn" (click)="handleSearch(); finderForm.reset()" [disabled]="!finderForm.form.valid">Search</button>
        </form>
     </div>
 
     <div id="profile" > 
-        <div class="user-profile">
+    <div class="user-profile">
             <img src={{user.avatarUrl}} alt="" />
             <div id="all-details">
             <div id="details">

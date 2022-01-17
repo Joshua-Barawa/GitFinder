@@ -24,11 +24,6 @@ body{
     text-align: center; 
 }
 
-h1{
-    color:white;
-    text-align: center;
-}
-
 #logo{
     width:70px;
     
@@ -67,7 +62,7 @@ h1{
 
 #repos{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-gap: 10px;
 }
 

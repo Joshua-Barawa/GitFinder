@@ -19,17 +19,12 @@ export class FinderFormComponent implements OnInit {
    
   }
 
-  ngOnInit(): void {
-
-   } 
+  
 
   handleSearch(){
-
-    this.configService.getUsers(this.username)
-
     this.user = this.configService.getUser();
     this.repos = this.configService.getRepos();
-
+    this.configService.getUsers(this.username)
     console.log(this.user)
     for(let i =0;i<this.repos.length;i++){
       this.repos[i].repository = new Repository(this.repos[i].name, this.repos[i].language, this.repos[i].forks, this.repos[i].watchers, this.repos[i].counts,
@@ -37,9 +32,13 @@ export class FinderFormComponent implements OnInit {
         console.log(this.username)
       }
   }
-
+  
   onSubmit(){
     this.submmitng = true;
   }
+
+  ngOnInit(): void {
+    this.configService.getUsers("Joshua-Barawa")
+   } 
 
 }
