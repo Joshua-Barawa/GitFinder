@@ -26,10 +26,10 @@ export class FinderFormComponent implements OnInit {
   handleSearch(){
     this.user = this.configService.user;
     this.repos = this.configService.repository;
-    
+
     this.configService.getUsers(this.username)
     for(let i =0;i<this.repos.length;i++){
-      this.repos[i].repository = new Repository(this.repos[i].name, this.repos[i].language, this.repos[i].forks, this.repos[i].watchers, this.repos[i].stargazers_count,
+      this.repos[i].repository = new Repository(this.repos[i].name, this.repos[i].language, this.repos[i].forks, this.repos[i].watchers, this.repos[i].counts,
         this.repos[i].html_url)
         console.log(this.repos[i].repository)
       }

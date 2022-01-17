@@ -5,7 +5,7 @@
 
         <form (ngSubmit)="onSubmit()" #finderForm="ngForm">
         <input type="text" id="names" name="username" [(ngModel)]="username" placeholder='search github username' required=""/>
-        <input type="submit" value="Search "id="btn" (click)="handleSearch()" [disabled]="!finderForm.form.valid"/>
+        <input type="submit" value="Search "id="btn" (click)="handleSearch()" />
        </form>
     </div>
 
